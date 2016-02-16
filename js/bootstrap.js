@@ -2362,134 +2362,179 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-$.getJSON("http://cpv2api.com/posts/published/j-w-v", function(resp){
-  if(resp.success){
-    for (var i = 0; i < resp.data.length; i++) { 
-    $('.posts ul').append('<li><a target="_blank" href="' + resp.data[i].link +'">' + resp.data[i].title + ' <span> ' +resp.data[i].views+ ' views</span> </a></li>');
-    }
+var config = {
+  // *
+  // CONFIG
+  // -------------- // 
+  number: 20, // number of objects
+  boundaries: 10, // example: 20 means position = THREE.Math.randInt(-20,20)
+  size: 2, // object size
+  // -------------- //
+  kaleidoscope: true,
+  sides: 6, // number of kaleidoscope sides
+  angle: 45, // kaleidoscope angle, in degrees
+  // -------------- //
+  colorshift: true, // RGB color shift shader filter
+  flatshading: true, // flat or smooth shading
+  wireframe: false // wireframe mode
+  // -------------- //
+};
+
+// init variables
+var renderer, scene, camera, composer, 
+  geometry, material, mesh, group, 
+  light, animation;
+
+// run
+init();
+animate();
+
+// initialize scene
+function init() {
+  
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera( 75, 1, 0.1, 1000 );
+
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize( window.innerHeight, window.innerHeight );
+  document.body.appendChild( renderer.domElement );
+    
+  geometry = new THREE.IcosahedronGeometry(config.size,0);
+  geometry.computeFaceNormals();
+  // note: if you want to use specific colors, change MeshNormalMaterial
+  // to MeshLambertMaterial and set the color and emissive properties. 
+  // http://threejs.org/docs/#Reference/Materials/MeshLambertMaterial
+  material = new THREE.MeshNormalMaterial({
+    wireframe: config.wireframe,
+    //wireframeLinewidth: 6,
+    shading: config.flatshading ? THREE.FlatShading : THREE.SmoothShading
+  });
+  
+  group = new THREE.Object3D();
+  
+  for (var i=0;i<config.number;i++) {
+    
+    mesh = new THREE.Mesh(geometry, material);
+    var b = config.boundaries;
+    mesh.position.set(
+      THREE.Math.randInt(-b,b),
+      THREE.Math.randInt(-b,b),
+      THREE.Math.randInt(-b,b)
+    )
+    
+    group.add(mesh);
+    
   }
-});
+  
+  scene.add(group);
 
-$.getJSON("http://cpv2api.com/pens/showcase/j-w-v", function(resp){
-  if(resp.success){
-    for (var i = 0; i < 5; i++) { 
-    $('.pens ul').append('<li><a target="_blank" href="' + resp.data[i].link +'">' + resp.data[i].title + ' <span> ' +resp.data[i].views+ ' views</span> </a></li>');
-    }
+  light = new THREE.DirectionalLight(0xFFFFFF);
+  light.position.set(0,0,250);
+  scene.add(light);
+
+  camera.position.set(0,0,40); 
+  
+  // postprocessing
+  if (config.kaleidoscope || config.colorshift) {
+    // support transparency thanks to http://codepen.io/SephReed/pen/jWWEQE
+    var renderTarget = new THREE.WebGLRenderTarget(
+      window.innerHeight,
+      window.innerHeight,
+      {
+        minFilter: THREE.LinearFilter, 
+        magFilter: THREE.LinearFilter, 
+        format: THREE.RGBAFormat, 
+        stencilBuffer: false 
+      }
+    );
+
+    composer = new THREE.EffectComposer(renderer, renderTarget);
+    composer.addPass(new THREE.RenderPass(scene, camera));    
   }
-}); 
 
+  if (config.kaleidoscope) {
+    var effect = new THREE.ShaderPass(THREE.KaleidoShader);
+    effect.uniforms['sides'].value = config.sides;
+    effect.uniforms['angle'].value = config.angle * Math.PI / 180;
+    composer.addPass(effect);
+  }
+  
+  if (config.colorshift) {
+    var effect = new THREE.ShaderPass( THREE.RGBShiftShader );
+    effect.uniforms['amount'].value = 0.005;
+    composer.addPass(effect);
+  }
+  
+  if (config.kaleidoscope || config.colorshift) {
+    effect.renderToScreen = true;
+  }
+      
+}
 
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 33,
-      "density": {
-        "enable": true,
-        "value_area": 1420.4657549380909
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "triangle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.06313181133058181,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 11.83721462448409,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
- 
+// animate
+function animate() {
+  animation = requestAnimationFrame(animate);
 
+  group.rotation.x += 0.01;
+  group.rotation.y += 0.01;
+  group.rotation.z += 0.01;
 
+  render();
+}
 
+function destroy() {
+  cancelAnimationFrame(animate);
+  
+}
+  
+// render
+function render() {
+  if (config.kaleidoscope || config.colorshift) {
+    composer.render();  
+  } else {
+    renderer.render(scene, camera);
+  }
+}
+
+// handle window resize
+window.addEventListener('resize', function(e) {
+
+  // Adjust the camera as normal
+  camera.updateProjectionMatrix();
+  
+  renderer.setSize(window.innerHeight, window.innerHeight);
+
+}, false);
+
+function openclose() {
+  var config_panel = document.querySelector('#config');
+  event.preventDefault();
+  if (config_panel.classList == 'closed') {
+    config_panel.classList.remove('closed');
+    config_panel.classList.add('open');
+  } else {
+    config_panel.classList.remove('open');
+    config_panel.classList.add('closed');
+  }
+}
+
+function opts() {
+  if (event.target.type == 'checkbox') {
+    config[event.target.id] = event.target.checked
+  } else {
+    config[event.target.id] = Number(event.target.value)
+  }
+  document.querySelector('body').removeChild(document.querySelector('canvas'));
+  init();
+}
+
+function background() {
+  var body = document.querySelector('body');
+  event.preventDefault();
+  if (body.classList == 'space') {
+    body.classList.remove('space');
+  } else {
+    body.classList.add('space');
+  }
+
+}

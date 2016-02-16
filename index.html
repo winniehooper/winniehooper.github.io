@@ -18,42 +18,64 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
+   <h1>Hello, world!</h1>
+<aside id="config" class="closed">
+  <a class="action" onClick="openclose()">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+      <title>Options</title>
+      <path fill="#FFF" d="M3 4h5q0.57 0 0.867 0.5l7.711 13.5h4.422q0.414 0 0.707 0.293t0.293 0.707-0.293 0.707-0.707 0.293h-5q-0.57 0-0.867-0.5l-7.711-13.5h-4.422q-0.414 0-0.707-0.293t-0.293-0.707 0.293-0.707 0.707-0.293zM14 4h5q0.414 0 0.707 0.293t0.293 0.707-0.293 0.707-0.707 0.293h-5q-0.414 0-0.707-0.293t-0.293-0.707 0.293-0.707 0.707-0.293z"></path>
+    </svg>
+  </a>
+  <h1>config</h1>
+  <form>
+    <p>3d</p>
+    <span>
+      <label for="number">number of objects</label>
+      <input type="number" value="20" id="number" onChange="opts()" />
+    </span>
+    <span>
+      <label for="boundaries">positioning boundaries</label>
+      <input type="number" value="10" id="boundaries" onChange="opts()" />
+    </span>
+    <span>
+      <label for="size">object size</label>
+      <input type="number" value="2" id="size" onChange="opts()" />
+    </span>
+    <p>kaleidoscope</p>
+    <span>
+      <input type="checkbox" id="kaleidoscope" onChange="opts()" checked />
+      <label for="kaleidoscope">kaleidoscope mode</label>
+    </span>
+    <span>
+      <label for="sides">number of sides</label>
+      <input type="number" value="6" id="sides" onChange="opts()" />
+    </span>
+    <span>
+      <label for="angle">kaleidoscope angle</label>
+      <input type="number" value="45" id="angle" onChange="opts()" />
+    </span>
+    <p>style</p>
+    <span>
+      <input type="checkbox" id="colorshift" onChange="opts()" checked />
+      <label for="colorshift">rgb color shift</label>
+    </span>
+    <span>
+      <input type="checkbox" id="flatshading" onChange="opts()" checked />
+      <label for="flatshading">flat shading</label>
+    </span>
+    <span>
+      <input type="checkbox" id="wireframe" onChange="opts()" />
+      <label for="wireframe">wireframe mode</label>
+    </span>
+    <span>
+      <input type="checkbox" id="space" onChange="background()" />
+      <label for="space">space mode</label>
+    </span>
+  </form>
+</aside>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <div id="particles-js">
-  <div class="container">
-    <div class="row top">
-      <div class="twelve column">
-        <div class="logo">V</div>
-        <h1>Joseph William Victory</h1>
-        <h2> Web Developer</h2>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="one-half column">
-        <div class="pens pulled">
-          <h1>Pens</h1>
-          <ul></ul>
-        </div>
-      </div>
-
-      <div class="one-half column">
-        <div class="posts pulled">
-          <h1>Posts</h1>
-          <ul></ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<div class="container ">
-  <div class="footer">
-  <p>Made using the awesome <a href="https://github.com/VincentGarreau/particles.js/">Particles.js</a>, <a href="http://cpv2api.com/">Codepen V2 API</a> & <a href="http://getskeleton.com/">Skeleton.css</a></p> </div></div>
-  </div>
   </body>
 </html>
