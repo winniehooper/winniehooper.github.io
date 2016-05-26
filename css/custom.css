@@ -6,6 +6,7 @@ color:#fff;
 background: #191e26;
 font-family: "proxima-nova",sans-serif;
 font-size: 18px;
+font
 line-height: 1.2em;
 }
 
@@ -16,4 +17,14 @@ h1 {
 img {
 	width: 100%;
 	padding-bottom: 10px;
+}
+
+.forma{
+	height: 428px;
+	background: rgb(15,41,85);
+	background: -moz-linear-gradient(45deg,  rgb(15,41,85) 1%, rgb(62,4,89) 100%);
+	background: -webkit-linear-gradient(45deg,  rgb(15,41,85) 1%,rgb(62,4,89) 100%);
+	background: linear-gradient(45deg,  rgb(15,41,85) 1%,rgb(62,4,89) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f2955', endColorstr='#3e0459',GradientType=1 );
+
 }
