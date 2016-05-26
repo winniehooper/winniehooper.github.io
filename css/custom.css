@@ -16,15 +16,36 @@ h1 {
 }
 img {
 	width: 100%;
-	padding-bottom: 10px;
 }
 
-.forma{
+.forma_bg{
 	height: 428px;
 	background: rgb(15,41,85);
 	background: -moz-linear-gradient(45deg,  rgb(15,41,85) 1%, rgb(62,4,89) 100%);
 	background: -webkit-linear-gradient(45deg,  rgb(15,41,85) 1%,rgb(62,4,89) 100%);
 	background: linear-gradient(45deg,  rgb(15,41,85) 1%,rgb(62,4,89) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f2955', endColorstr='#3e0459',GradientType=1 );
+
+}
+
+img.forma_img {
+width: 433px;
+}
+
+.form-horizontal .control-label {
+    padding-top: 6px;
+    margin-bottom: 0;
+    text-align: left;
+
+}
+
+label {
+	font-size: 16px;
+	font-weight: 400; 
+
+}
+
+.form-control {
+	font-size: 16px;
 
 }
