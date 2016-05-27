@@ -41,7 +41,7 @@
       </div>
   </div>
 
-  <div class="container galerry">
+  <div class="container galerry" style="margin-bottom: 30px">
  		<div class="row">
   		<div class="col-xs-10 col-sm-4 col-md-4 col-lg-4">
   			<img src="img/yarku_2.png">
@@ -67,40 +67,35 @@
 
 		</div>  </div>    
 
-  <div class="container residents">
- 		<div class="row" style="margin-bottom: 40px">
-  		<div class="col-xs-10">
-  			<h2>Лучших набираем в резиденты</h2>
-  			<p>Ученики сдают экзамен и лучшим предлагают стать резидентами лейбла. Резиденты играют в летних лагерях Белоруссии, СНГ и Европы. Участвуют в мастер-классах, конкурсах и фестивалях диджейского мастерства.</p>
+  <div class="container residents" style="margin-bottom: 40px">
+  		<div class="col-xs-11 col-sm-11 col-md-10">
+  			<h2>Лучших набираем в резиденты</h2>
+  			<p>Ученики сдают экзамен и лучшим предлагают стать резидентами лейбла. Резиденты играют в летних лагерях Белоруссии, СНГ и Европы. Участвуют в мастер-классах, конкурсах и фестивалях диджейского мастерства.</p>
   		</div>
-
-  		<div class="col-xs-3">
+  		<div class="col-xs-10 col-sm-6 col-md-3">
   			<img src="img/kirillov_2.png">
   		</div>
-
-  		<div class="col-xs-3">
-  			<h3>Андрей Кириллов</h3>
-  			<p>10 лет</p>
+  		<div class="col-xs-10 col-sm-6 col-md-3">
+  			<h3 style="margin-top: 0px">Андрей Кириллов</h3>
+  			<p class="pod">10 лет</p>
   			<p>DJ Kirillov</p>
   			<p>«В школе меня научили справляться с волнением, улыбаться и вести себя профессионально»</p>
   		</div>
-
-  		<div class="col-xs-3">
+  		<div class="col-xs-10 col-sm-6 col-md-3">
   			<img src="img/fomin_1.png">
   		</div>
-
-  		<div class="col-xs-3">
-  			<h3>Илья Фомин </h3>
-  			<p>11 лет</p>
+  		<div class="col-xs-10 col-sm-6 col-md-3">
+  			<h3 style="margin-top: 0px">Илья Фомин </h3>
+  			<p class="pod">11 лет</p>
   			<p>DJ Fomin</p>
   			<p>«Выступления приносят мне много впечатлений! Нравится поддержка зрителей и родных. Я буду тренироваться и развивать своё шоу»</p>
   		</div>
 
 
-		</div>  </div>   
+</div>   
 
-  <div class="container trainers">
- 			<div class="row" style="padding-right: 80px; margin-bottom: 50px">
+  <div class="container trainers" style="padding-right: 80px; margin-bottom: 50px">
+ 			<div class="row">
   		<div class="col-lg-10">
   			<h2>Учим на практике</h2>
   			<p>Тренеры — диджеи со стажем от 5 лет. Умеют сложное объяснять просто.</p>
@@ -175,6 +170,43 @@
 		
 		<div class="row form">
 				<div class="row forma_bg">
+
+
+<!-- атрибут required говорит, что заполнение поля обязательно -->
+<form method="POST" id="feedback-form">
+Как к Вам обращаться:
+<input type="text" name="nameFF" required placeholder="фамилия имя отчество" x-autocompletetype="name">
+Email для связи:
+<input type="email" name="contactFF" required placeholder="адрес электронной почты" x-autocompletetype="email">
+Ваше сообщение:
+<textarea name="messageFF" required rows="5"></textarea>
+<input type="submit" value="отправить">
+</form>
+
+<script>
+document.getElementById('feedback-form').addEventListener('submit', function(evt){
+  var http = new XMLHttpRequest(), f = this;
+  evt.preventDefault();
+  http.open("POST", "../php/contacts.php", true);
+  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
+  http.onreadystatechange = function() {
+    if (http.readyState == 4 && http.status == 200) {
+      alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');    
+      f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
+      f.messageFF.value='';
+    }
+  }
+  http.onerror = function() {
+    alert('Извините, данные не были переданы');
+  }
+}, false);
+</script>
+
+
+
+
+
 					<div class="col-md-7">
 						<h2>Заявка на собеседование</h2>
 						<div class="form-horizontal">
