@@ -1,6 +1,6 @@
 /*Надстройка стилей*/
 body {
-margin-top:50px; 
+/*margin-top:50px; */
 margin-bottom:80px; 
 color:#fff;
 background: #191e26;
@@ -13,6 +13,8 @@ line-height: 1.2em;
 h1 {
 	font-weight: 900;
 	font-size: 92px;
+	color: #ffcc00;
+	line-height: 1em;
 }
 img {
 	width: 100%;
@@ -47,5 +49,20 @@ label {
 
 .form-control {
 	font-size: 16px;
+
+}
+
+.big_foto {
+	background-image: url(../img/yarku_1.png);
+	margin-bottom: -265px;
+	height: calc(100vh - 18rem);
+	background-position: center center;
+	background-size: cover;
+	margin-right: 10vh;
+}
+
+.container-fluid {
+	padding-left: 0px;
+
 
 }
