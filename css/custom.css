@@ -15,6 +15,21 @@ p{
 	line-height: 1.3em;
 }
 
+a{
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 1px solid;
+	border-color: #808080;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #fff;
+	border-color: #fff;
+}
+
+
+
 h1 {
 	font-weight: 900;
 	font-size: 92px;
