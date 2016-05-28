@@ -19,7 +19,6 @@ p.pod {
 	font-size: 14px;
 	font-weight: 300;
 	margin-bottom: 10px;
-	padding-top: 8px;
 }
 
 p.podzagolovok{
@@ -79,6 +78,7 @@ h3 {
 
 img {
 	width: 100%;
+	margin: 0 0 10px;
 }
 
 img.noflex{
@@ -98,7 +98,9 @@ img.noflex{
 	float: right;
 }
 
-
+.map {
+	padding: 25px 15px 0;
+}
 
 
 .forma {
