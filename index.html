@@ -170,39 +170,41 @@
 						<h2>Заявка на собеседование</h2>
 						<div class="form-horizontal">
 
-<form>
-
-		<!-- Hidden Required Fields -->
-		<input type="hidden" name="project_name" value="SuperDJ">
-		<input type="hidden" name="admin_email" value="evstratenko.k@gmail.com">
-		<input type="hidden" name="form_subject" value="Form Subject">
-		<!-- END Hidden Required Fields -->
-
-		<input type="text" name="Name" placeholder="You name..." required><br>
-		<input type="text" name="E-mail" placeholder="You E-mail..." required><br>
-		<input type="text" name="Phone" placeholder="You phone..."><br>
-		<button>Send</button>
-
-	</form>
-
-
-
-
-
-							<!-- <form id="form">
-							<div id="form" class="form-group">
-									<label for="inputtext3" class="col-md-4 control-label">Имя</label>
-									<div class="col-md-8">
-										<input name="name" type="text" class="form-control"required>
-									</div>
-									<div class="col-md-offset-4 col-md-8">
-										<button type="submit" class="btn btn-default">Отправить</button>
-									</div>									
-							</div></form> -->
+							<form>
 							
+									<!-- Hidden Required Fields -->
+									<input type="hidden" name="project_name" value="SuperDJ">
+									<input type="hidden" name="admin_email" value="evstratenko.k@gmail.com">
+									<input type="hidden" name="form_subject" value="Заявка с SuperDJ">
+									<!-- END Hidden Required Fields -->
 
+			<!-- 						<div class="col-md-offset-4 col-md-8">
+										<button type="submit" class="btn btn-default">Отправить</button>
+									</div>	 -->								
+									<div class="form-group">
+										<label for="inputtext1" class="col-md-2 control-label">Имя</label>
+										<div class="col-md-6">
+											<input type="text" name="Имя" class="form-control" required>
+										</div>
+									</div>
 
-
+									<div class="form-group">
+										<label for="inputtext2" class="col-md-2 control-label">Дата рождения</label>
+										<div class="col-md-6">
+											<input type="date" name="Дата рождения" class="form-control" required>
+										</div>
+									</div>
+									
+									<div class="form-group">
+											<div class="col-md-offset-2 col-md-6">
+												<button type="sibmit" class="btn btn-default">Отправить</button>
+											</div>
+									</div>										
+									
+									<!-- <button>Send</button> -->
+							
+								</form>
+					
 
 
 
