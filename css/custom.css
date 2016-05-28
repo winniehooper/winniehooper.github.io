@@ -147,10 +147,10 @@ margin-top: 190px;
     position: absolute;
     width: 100%;
     background: transparent;
-    background: -moz-radial-gradient(right, rgba(161, 24, 203, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -webkit-radial-gradient(right, rgba(161, 24, 203, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -o-radial-gradient(right, rgba(161, 24, 203, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -ms-radial-gradient(right, rgba(161, 24, 203, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -moz-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -webkit-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -o-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -ms-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
 }
 #mask_green {
     height: 1200px;
@@ -159,24 +159,11 @@ margin-top: 190px;
     position: absolute;
     width: 100%;
     background: transparent;
-    background: -moz-radial-gradient(left, rgba(24, 203, 66, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -webkit-radial-gradient(left, rgba(24, 203, 66, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -o-radial-gradient(left, rgba(24, 203, 66, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -ms-radial-gradient(left, rgba(24, 203, 66, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -moz-radial-gradient(left, rgba(0, 255, 0, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -webkit-radial-gradient(left, rgba(0, 255, 0, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -o-radial-gradient(left, rgba(0, 255, 0, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -ms-radial-gradient(left, rgba(0, 255, 0, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
     margin-top: 600px;
-}
-#mask_blue {
-    height: 1200px;
-    z-index: -1;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    background: transparent;
-    background: -moz-radial-gradient(right, rgba(255, 0, 126, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -webkit-radial-gradient(right, rgba(255, 0, 126, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -o-radial-gradient(right, rgba(255, 0, 126, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -ms-radial-gradient(right, rgba(255, 0, 126, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    margin-top: 1200px;
 }
 #mask_red {
     height: 1200px;
@@ -185,10 +172,23 @@ margin-top: 190px;
     position: absolute;
     width: 100%;
     background: transparent;
-    background: -moz-radial-gradient(left, rgba(21, 206, 252, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -webkit-radial-gradient(left, rgba(21, 206, 252, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -o-radial-gradient(left, rgba(21, 206, 252, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
-    background: -ms-radial-gradient(left, rgba(21, 206, 252, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -moz-radial-gradient(right, rgba(255, 0, 128, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -webkit-radial-gradient(right, rgba(255, 0, 128, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -o-radial-gradient(right, rgba(255, 0, 128, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -ms-radial-gradient(right, rgba(255, 0, 128, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    margin-top: 1200px;
+}
+#mask_blue {
+    height: 1200px;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    background: -moz-radial-gradient(left, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -webkit-radial-gradient(left, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -o-radial-gradient(left, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -ms-radial-gradient(left, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
     margin-top: 1800px;
 }
 
