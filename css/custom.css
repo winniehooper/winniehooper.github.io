@@ -36,6 +36,10 @@ img {
 	width: 100%;
 }
 
+img.noflex{
+	width: auto;
+}
+
 .forma_bg{
 	height: 428px;
 	background: rgb(15,41,85);
@@ -71,7 +75,7 @@ label {
 .big_foto {
 	background-image: url(../img/yarku_1.jpg);
 	margin-bottom: -265px;
-	height: calc(100vh - 20rem);
+	height: calc(100vh - 16rem);
 	background-position: center center;
 	background-size: cover;
 	/*margin-right: 8vh;*/
@@ -191,7 +195,45 @@ margin-top: 190px;
     background: -ms-radial-gradient(left, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
     margin-top: 1800px;
 }
-
+#mask_deepblue {
+    height: 1200px;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    background: -moz-radial-gradient(right, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -webkit-radial-gradient(right, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -o-radial-gradient(right, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -ms-radial-gradient(right, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+    margin-top: 2400px;
+}
+#mask_coldgreen {
+    height: 1200px;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    background: -moz-radial-gradient(left, rgba(0, 155, 128, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -webkit-radial-gradient(left, rgba(0, 155, 128, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -o-radial-gradient(left, rgba(0, 155, 128, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -ms-radial-gradient(left, rgba(0, 155, 128, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
+    margin-top: 3000px;
+}
+#mask_red_2 {
+    height: 1200px;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    background: -moz-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -webkit-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -o-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    background: -ms-radial-gradient(right, rgba(170, 0, 255, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+	margin-top: 3600px;
+	}
 
 
 
