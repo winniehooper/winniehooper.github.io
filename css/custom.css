@@ -127,9 +127,22 @@ img.noflex{
 
 }
 
-img.forma_img {
-width: 433px;
+
+@media (min-width: 992px) {
+    .yarku_forma  {
+          margin-top: -74px;
+    }
 }
+@media (min-width: 1200px) {
+    .yarku_forma  {
+          margin-top: -189px;
+    }
+}
+
+.yarku_forma @screen-lg{
+  margin-top: -173px;
+}
+
 
 .form-horizontal .control-label {
     padding-top: 6px;
@@ -174,7 +187,7 @@ width: 433px;
 .big_foto {
 	background-image: url(../img/yarku_1.jpg);
 	margin-bottom: -265px;
-	height: calc(100vh - 16rem);
+	height: calc(80vh - 16rem);
 	background-position: center center;
 	background-size: cover;
 	/*margin-right: 8vh;*/
