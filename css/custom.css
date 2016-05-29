@@ -138,16 +138,33 @@ width: 433px;
 
 }
 
-label {
-	font-size: 16px;
-	font-weight: 300; 
 
+.form-horizontal .control-label {
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 8px;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .form-control {
 	font-size: 16px;
-
+  color: #fff;
+  border:0px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  padding: 6px 1px;
 }
+
+.btn-default {
+  color: #fff;
+  background-color: #ed1c24;
+  border: none;
+  border-radius: 0px;
+}
+
 
 .big_foto {
 	background-image: url(../img/yarku_1.jpg);
