@@ -228,8 +228,8 @@ label {
 
 .big_foto {
 	background-image: url(../img/yarku_1.jpg);
-/*	margin-bottom: -265px;*/
-	height: calc(80vh - 16rem);
+	margin-bottom: -225px;
+	height: calc(90vh);
 	background-position: center center;
 	background-size: cover;
 	/*margin-right: 8vh;*/
