@@ -11,7 +11,7 @@ line-height: 1.35em;
 }
 
 p{
-	margin: 0 0 10px;
+	margin: 0 0 8px;
 	line-height: 1.3em;
   color: #ececec;
 }
@@ -106,7 +106,7 @@ img.noflex{
 
 .forma {
 	height: 438px;
-	padding: 10px 20px 0;
+	padding: 20px 0 0 30px;
 	line-height: 1.1em;
 	background: rgb(15,41,85);
 	background: -moz-linear-gradient(45deg,  rgb(15,41,85) 1%, rgb(62,4,89) 100%);
@@ -131,12 +131,12 @@ img.noflex{
 
 @media (min-width: 992px) {
     .yarku_forma  {
-          margin-top: -74px;
+          margin-top: -89px;
     }
 }
 @media (min-width: 1200px) {
     .yarku_forma  {
-          margin-top: -189px;
+          margin-top: -204px;
     }
 }
 
@@ -159,28 +159,36 @@ img.noflex{
 
 }
 
+label {
+  padding-right: 0px;
+}
 
 .form-horizontal .control-label {
     font-size: 16px;
     font-weight: 300;
     padding-top: 8px;
+    padding-right: none;
     margin-bottom: 0;
     text-align: left;
 }
 
 .form-control {
 	font-size: 16px;
+  height: 30px;
   color: #fff;
   border:0px;
   border-radius: 0;
   -webkit-appearance: none;
   border-bottom: 1px solid rgba(255,255,255,0.6);
   background-color: transparent;
-  padding: 6px 1px;
+  padding: 6px 1px 0;
 }
 
-.form-control:hover {
+.form-control:focus {
+  border: none;
+  box-shadow: none;
   border-bottom: 1px solid rgba(255,255,255,1);
+
 }
 
 
@@ -188,8 +196,34 @@ img.noflex{
   color: #fff;
   background-color: #ed1c24;
   border: none;
-  border-radius: 0px;
+  border-radius: 1px;
+  padding: 7px 35px 8px;
 }
+
+.btn-default:hover {
+  color: #fff;
+  background-color: #ff0610;
+  border: none;
+  border-radius: 1px;
+}
+
+.btn-default.focus, .btn-default:focus {
+  color: #fff;
+  background-color: #ff0610;
+  border: none;
+  border-radius: 1px;
+  opacity: 0.8;
+}
+
+.btn-default.active, .btn-default:active {
+  color: #fff;
+  background-color: #ff0610;
+  border: none;
+  border-radius: 1px;
+  opacity: 0.8;
+}
+
+
 
 
 .big_foto {
