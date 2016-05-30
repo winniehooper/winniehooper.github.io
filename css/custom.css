@@ -105,7 +105,7 @@ img.noflex{
 
 
 .forma {
-	height: 438px;
+	height: 438px
 	padding: 20px 0 0 30px;
 	line-height: 1.1em;
 	background: rgb(15,41,85);
@@ -134,6 +134,17 @@ img.noflex{
           margin-top: -89px;
     }
 }
+
+@media (max-width: 990px) {
+    .yarku_forma  {
+          display: none;
+    }
+    .forma {
+      height: 520px;
+      padding: 20px 30px 30px;
+    }
+}
+
 @media (min-width: 1200px) {
     .yarku_forma  {
           margin-top: -204px;
