@@ -133,6 +133,9 @@ img.noflex{
     .yarku_forma  {
           margin-top: -89px;
     }
+    .forma {
+      padding: 10px 20px 0px;
+    }
 }
 
 @media (max-width: 990px) {
@@ -147,7 +150,7 @@ img.noflex{
 
 @media (min-width: 1200px) {
     .yarku_forma  {
-          margin-top: -204px;
+          margin-top: -194px;
     }
 }
 
@@ -162,6 +165,7 @@ img.noflex{
       font-size: 62px;
     }
 }
+
 
 
 .form-horizontal .control-label {
