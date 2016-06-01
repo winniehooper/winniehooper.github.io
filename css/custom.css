@@ -278,7 +278,7 @@ input[type=number]::-webkit-outer-spin-button {
 .big_foto {
 	background-image: url(../img/yarku_1.jpg);
 	margin-bottom: -225px;
-	height: calc(90vh);
+	height: 98vh;
 	background-position: center center;
 	background-size: cover;
 	/*margin-right: 8vh;*/
