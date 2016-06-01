@@ -17,10 +17,20 @@ p{
 }
 
 p.pod {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+
+p.knopa {
 	font-size: 14px;
 	font-weight: 300;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
   opacity: 0.7;
+  display:inline-block;
+  padding:0 12px 0;
+  height: 37px;
 }
 
 p.podzagolovok{
@@ -61,7 +71,7 @@ a:visited {
 
 h1 {
 	font-weight: 900;
-	font-size: 92px;
+	font-size: 96px;
 	color: #fff; /*#ffcc00*/
 	line-height: 1em;
 }
@@ -117,6 +127,10 @@ img.noflex{
 
 }
 
+.btn {
+  vertical-align: top;
+}
+
 .forma_bottom{
 	padding: 25px 20px 0;
 	height: 75px;
@@ -129,10 +143,19 @@ img.noflex{
 
 }
 
+.new-select 
+{
+  overflow: hidden; 
+  background: url(../img/dropdawn_arrow.png) no-repeat right;
+  width: 240px;
+  height: 34px;
+}
+
+
 
 @media (min-width: 992px) {
     .yarku_forma  {
-          margin-top: -89px;
+          margin-top: -76px;
     }
     .forma {
       padding: 10px 20px 0px;
@@ -151,17 +174,17 @@ img.noflex{
 
 @media (min-width: 1200px) {
     .yarku_forma  {
-          margin-top: -194px;
+          margin-top: -192px;
     }
 }
 
 @media (max-width: 992px) {
     h1 {
-      font-size: 72px;
+      font-size: 96px;
       margin-bottom: 90px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 992px) {
     h1 {
       font-size: 62px;
     }
@@ -205,27 +228,30 @@ input[type=number]::-webkit-outer-spin-button {
   border-bottom: 1px solid rgba(255,255,255,0.6);
   background-color: transparent;
   padding: 6px 1px 0;
+  transition: none;
 }
 
 .form-control:focus {
   border: none;
   box-shadow: none;
   border-bottom: 1px solid rgba(255,255,255,1);
+  transition: none;
 
 }
 
 
 .btn-default {
   color: #fff;
+  font-size: 16px;
   background-color: #ed1c24;
   border: none;
   border-radius: 1px;
-  padding: 7px 35px 8px;
+  padding: 6px 30px 9px;
 }
 
 .btn-default:hover {
   color: #fff;
-  background-color: #ff0610;
+  background-color: #FF4E3A;
   border: none;
   border-radius: 1px;
 }
