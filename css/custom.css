@@ -272,7 +272,9 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0.8;
 }
 
-
+.resdis {
+  padding-right: 25px
+}
 
 
 .big_foto {
