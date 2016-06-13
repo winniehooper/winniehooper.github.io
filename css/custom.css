@@ -282,15 +282,15 @@ input[type=number]::-webkit-outer-spin-button {
 .big_foto {
 	background-image: url(../img/yarku_1.jpg);
 	margin-bottom: -225px;
-	height: 98vh;
+	height: 100vh;
 	background-position: center center;
 	background-size: cover;
-	/*margin-right: 8vh;*/
 }
 
 
 .nexus {
-  margin-top: -4vw;
+  margin-top: -3vw;
+  width: 135%;
 }
 
 .black {
