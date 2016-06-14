@@ -18,3 +18,35 @@ $(document).ready(function() {
 	});
 
 });
+
+$(window).scroll(function() {
+
+	var st = $(this).scrollTop() /18;
+
+	$(".parallobject_1").css({
+		"transform" : "translate3d(0px, -" + st  + "%, .01px)",
+		"-webkit-transform" : "translate3d(0px, -" + st  + "%, .01px)"
+	});
+
+});
+
+$(window).scroll(function() {
+
+	var st = $(this).scrollTop() /15;
+
+	$(".parallobject_2").css({
+		"transform" : "translate3d(0px, -" + st  + "%, .01px)",
+		"-webkit-transform" : "translate3d(0px, -" + st  + "%, .01px)"
+	});
+
+});
+$(window).scroll(function() {
+
+	var st = $(this).scrollTop() /25;
+
+	$(".parimg-slider").css({
+		"transform" : "translate3d(0px, -" + st  + "%, .01px)",
+		"-webkit-transform" : "translate3d(0px, -" + st  + "%, .01px)"
+	});
+
+});
