@@ -151,6 +151,9 @@ img.noflex{
   width: 240px;
   height: 34px;
 }
+.new-select option {
+    color: #000!important;
+}
 
 
 
@@ -448,6 +451,9 @@ margin-bottom: 10px;
     background: -ms-radial-gradient(right, rgba(170, 0, 255, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
 	margin-top: 3600px;
 	}
+.msg-success  {
+ display: none;
+}
 
 
 

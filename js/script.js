@@ -2,20 +2,39 @@ $(document).ready(function() {
 
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Заявка отправлена. Перезвоним в течение суток");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
+		initValid();
+
 		return false;
 	});
+	function showSuccess() {
+		var form = $('#form-request');
+		form.find('.btn-submit').hide();
+		form.find('.alert-success').fadeIn()
+
+	}
+
+	function initValid() {
+		// Validation options http://jqueryvalidation.org/documentation/
+		var form_validator = $('#form-request');
+		if (form_validator.length && $.fn.validate) {
+			form_validator.validate({
+				submitHandler: function() {
+					$.ajax({
+						type: "POST",
+						url: "mail.php", //Change
+						data: $('#form-request').serialize()
+					}).done(function() {
+						showSuccess();
+						setTimeout(function() {
+							// Done Functions
+							$('#form-request').trigger("reset");
+						}, 1000);
+					});
+				}
+			});
+		}
+	}
+	initValid();
 
 });
 
