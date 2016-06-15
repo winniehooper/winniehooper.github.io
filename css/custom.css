@@ -452,7 +452,10 @@ margin-bottom: 10px;
 	margin-top: 3600px;
 	}
 .msg-success  {
- display: none;
+    display: none;
+    background: #3c763d;
+    color: #fff;
+    padding: 10px 13px 11px;
 }
 
 

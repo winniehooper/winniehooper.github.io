@@ -7,9 +7,9 @@ $(document).ready(function() {
 		return false;
 	});
 	function showSuccess() {
-		var form = $('#form-request');
+		var form = $('.forma');
 		form.find('.btn-submit').hide();
-		form.find('.alert-success').fadeIn()
+		form.find('.msg-success ').fadeIn()
 
 	}
 
