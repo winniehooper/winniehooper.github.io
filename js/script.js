@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	//https://igorescobar.github.io/jQuery-Mask-Plugin/
+	$('#phone').mask('+375 00 000-00-00', {placeholder: "+375"});
+
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
 		initValid();
@@ -8,8 +11,13 @@ $(document).ready(function() {
 	});
 	function showSuccess() {
 		var form = $('.forma');
-		form.find('.btn-submit').hide();
-		form.find('.msg-success ').fadeIn()
+		//form.find('.btn-submit').hide();
+		form.find('.msg-success ').fadeIn();
+
+		function second_passed() {
+			form.find('.msg-success ').fadeOut();
+		}
+		setTimeout(second_passed, 3000)
 
 	}
 

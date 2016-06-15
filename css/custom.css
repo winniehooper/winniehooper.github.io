@@ -16,11 +16,16 @@ p{
   color: #fff;
 }
 
+label.error,
 p.pod {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 10px;
   opacity: 0.7;
+}
+
+label.error {
+    white-space: nowrap;
 }
 
 p.knopa {
@@ -455,7 +460,17 @@ margin-bottom: 10px;
     display: none;
     background: #3c763d;
     color: #fff;
-    padding: 10px 13px 11px;
+    padding: 15px 13px 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    z-index: 10;
+
+
 }
 
 
