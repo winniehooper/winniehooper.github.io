@@ -14,8 +14,8 @@ if ( $method === 'POST' ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
 			$message .= "
 			" . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
-			<td '><b>$key</b></td>
-			<td >$value</td>
+			<td style='padding: 8px 0 10px; border-bottom: #e9e9e9 1px solid;'><b>$key</b></td>
+			<td style='padding: 8px 0 10px; border-bottom: #e9e9e9 1px solid;'>$value</td>
 		</tr>
 		";
 	}
@@ -29,9 +29,9 @@ if ( $method === 'POST' ) {
 	foreach ( $_GET as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
 			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr >' ) . "
-			<td ><b>$key</b></td>
-			<td >$value</td>
+			" . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
+			<td style='padding: 8px 0 10px; border-bottom: #e9e9e9 1px solid;'><b>$key</b></td>
+			<td style='padding: 8px 0 10px; border-bottom: #e9e9e9 1px solid;'>$value</td>
 		</tr>
 		";
 	}
