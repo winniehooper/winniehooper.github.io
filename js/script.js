@@ -106,7 +106,11 @@ $(window).scroll(function() {
 			}
 		});
 
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> origin/master
 		// затоговка эффекта
 		/*$('.tutclass').each(function(){
 			if(isVisible($(this), $(window))){
