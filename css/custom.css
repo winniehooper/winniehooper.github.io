@@ -71,7 +71,7 @@ a:active {
 
 a:visited {
 	text-decoration: none;
-	opacity: 0,9;
+	opacity: 0.9;
 	color: #fff;
 }
 
@@ -126,7 +126,8 @@ img.noflex{
 
 
 .forma {
-	height: 438px
+    position: relative;
+	height: 438px;
 	padding: 20px 15px 30px;
 	line-height: 1.1em;
 	background: rgb(15,41,85);
@@ -468,15 +469,39 @@ margin-bottom: 10px;
     background: #3c763d;
     color: #fff;
     padding: 15px 13px 18px;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
     width: 100%;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
     z-index: 10;
+    bottom: 37px;
+    left: 0;
+    right: 0;
 }
+
+@media (max-width: 1199px) {
+    .msg-success  {
+        bottom: 8px;
+    }
+}
+@media (max-width: 991px) {
+    .msg-success  {
+        bottom: 35px;
+    }
+
+}
+@media (max-width: 767px) {
+    .msg-success  {
+        bottom: 45px;
+    }
+    .forma {
+        height: auto;
+
+    }
+}
+
+
 
 /*.msg-success  {
     display: none;
