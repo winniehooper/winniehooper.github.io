@@ -80,3 +80,39 @@ $(window).scroll(function() {
 	});
 
 });
+
+!function () {
+	function isVisible( row, container ){
+
+		var elementTop = $(row).offset().top,
+			elementHeight = $(row).height(),
+			containerTop = container.scrollTop(),
+			containerHeight = container.height();
+
+		return ((((elementTop - containerTop) + elementHeight) > 0) && ((elementTop - containerTop) < containerHeight));
+	}
+
+
+	// Call functions
+	$(function () {
+
+	});
+
+	$(window).on('scroll', function () {
+		$('.hasAnim').each(function(){
+			if(isVisible($(this), $(window))){
+				$(this).addClass('animated fadeInUp');
+				//console.log();
+			}
+		});
+
+
+		// затоговка эффекта
+		/*$('.tutclass').each(function(){
+			if(isVisible($(this), $(window))){
+				$(this).addClass('animated fadeInUp');
+				//console.log();
+			}
+		});*/
+	});
+}();
