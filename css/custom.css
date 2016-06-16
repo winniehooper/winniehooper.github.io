@@ -83,8 +83,8 @@ h1 {
 }
 
 h2{
-	font-size: 32px;
-	font-weight: 400;
+	font-size: 36px;
+	font-weight: 500;
 }
 
 h3 {
@@ -457,6 +457,7 @@ margin-bottom: 10px;
     background: -ms-radial-gradient(right, rgba(170, 0, 255, 0.2) 0%, rgba(0, 0, 0, 0) 60%);
 	margin-top: 3600px;
 	}
+
 .msg-success  {
     display: none;
     background: #3c763d;
@@ -470,9 +471,23 @@ margin-bottom: 10px;
     font-weight: 400;
     text-align: center;
     z-index: 10;
-
-
 }
+
+/*.msg-success  {
+    display: none;
+    background: #3c763d;
+    color: #fff;
+    padding: 15px 13px 18px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    z-index: 10;
+    margin: -155px 0 0;
+}*/
 
 
 

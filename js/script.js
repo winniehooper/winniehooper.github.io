@@ -29,11 +29,7 @@ $(document).ready(function() {
 		// 	form.find('.msg-success ').fadeOut();
 		// }
 		// setTimeout(second_passed, 3000)
-		
-		function second_passed() {
-			form.find('.msg-success ').fadeOut();
-		}
-		setTimeout(second_passed, 3000)
+
 
 	}
 
