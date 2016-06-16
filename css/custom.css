@@ -10,6 +10,10 @@ font-weight: 300;
 line-height: 1.35em;
 }
 
+.row {
+  padding: 0 20px 0;
+}
+
 p{
 	margin: 0 0 9px;
 	line-height: 1.3em;
@@ -123,8 +127,8 @@ img.noflex{
 
 .forma {
     position: relative;
-	/*height: 438px;*/
-	padding: 20px 0 15px 30px;
+	height: 438px;
+	padding: 20px 15px 30px;
 	line-height: 1.1em;
 	background: rgb(15,41,85);
 	background: -moz-linear-gradient(45deg,  rgb(15,41,85) 1%, rgb(62,4,89) 100%);
@@ -168,7 +172,7 @@ img.noflex{
           margin-top: -76px;
     }
     .forma {
-      padding: 10px 30px 0px;
+      padding: 10px 20px 0px;
     }
     .residents_2 {
       display: none;
@@ -181,7 +185,7 @@ img.noflex{
     }
     .forma {
       height: 520px;
-      padding: 10px 30px 40px;
+      padding: 10px 20px 40px;
     }
     h1 {
       font-size: 62px;
