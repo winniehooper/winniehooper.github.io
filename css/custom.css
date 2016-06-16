@@ -475,14 +475,14 @@ margin-bottom: 10px;
     font-weight: 400;
     text-align: center;
     z-index: 10;
-    bottom: 22px;
+    bottom: 37px;
     left: 0;
     right: 0;
 }
 
 @media (max-width: 1199px) {
     .msg-success  {
-        bottom: 11px;
+        bottom: 8px;
     }
 }
 @media (max-width: 991px) {
