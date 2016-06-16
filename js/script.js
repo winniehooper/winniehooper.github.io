@@ -5,10 +5,21 @@ $(document).ready(function() {
 
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
-		initValid();
+			var th = $(this);
+			$.ajax({
+				type: "POST",
+				url: "mail.php", //Change
+				data: th.serialize()
+			}).done(function() {
+					showSuccess();
+				setTimeout(function() {
+					// Done Functions
+					$('#form-request').trigger("reset");
+				}, 1000);
+			});
+			return false;
+		});
 
-		return false;
-	});
 	function showSuccess() {
 		var form = $('.forma');
 		//form.find('.btn-submit').hide();
@@ -21,28 +32,28 @@ $(document).ready(function() {
 
 	}
 
-	function initValid() {
-		// Validation options http://jqueryvalidation.org/documentation/
-		var form_validator = $('#form-request');
-		if (form_validator.length && $.fn.validate) {
-			form_validator.validate({
-				submitHandler: function() {
-					$.ajax({
-						type: "POST",
-						url: "mail.php", //Change
-						data: $('#form-request').serialize()
-					}).done(function() {
-						showSuccess();
-						setTimeout(function() {
-							// Done Functions
-							$('#form-request').trigger("reset");
-						}, 1000);
-					});
-				}
-			});
-		}
-	}
-	initValid();
+	// function initValid() {
+	// 	// Validation options http://jqueryvalidation.org/documentation/
+	// 	var form_validator = $('#form-request');
+	// 	if (form_validator.length && $.fn.validate) {
+	// 		form_validator.validate({
+	// 			submitHandler: function() {
+	// 				$.ajax({
+	// 					type: "POST",
+	// 					url: "mail.php", //Change
+	// 					data: $('#form-request').serialize()
+	// 				}).done(function() {
+	// 					showSuccess();
+	// 					setTimeout(function() {
+	// 						// Done Functions
+	// 						$('#form-request').trigger("reset");
+	// 					}, 1000);
+	// 				});
+	// 			}
+	// 		});
+	// 	}
+	// }
+	// initValid();
 
 });
 
