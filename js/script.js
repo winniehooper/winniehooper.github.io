@@ -5,32 +5,23 @@ $(document).ready(function() {
 
 	//E-mail Ajax Send
 	$("form").submit(function() { //Change
-			var th = $(this);
-			$.ajax({
-				type: "POST",
-				url: "mail.php", //Change
-				data: th.serialize()
-			}).done(function() {
-					showSuccess();
-				setTimeout(function() {
-					// Done Functions
-					$('#form-request').trigger("reset");
-				}, 1000);
-			});
-			return false;
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			showSuccess();
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
 		});
+		return false;
+	});
 
 	function showSuccess() {
-		var form = $('.forma');
-		//form.find('.btn-submit').hide();
-		form.find('.msg-success ').fadeIn();
-
-		// function second_passed() {
-		// 	form.find('.msg-success ').fadeOut();
-		// }
-		// setTimeout(second_passed, 3000)
-
-
+		$('.msg-success ').fadeIn();
 	}
 
 	// function initValid() {
