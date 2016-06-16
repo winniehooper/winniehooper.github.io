@@ -25,6 +25,11 @@ $(document).ready(function() {
 		//form.find('.btn-submit').hide();
 		form.find('.msg-success ').fadeIn();
 
+		// function second_passed() {
+		// 	form.find('.msg-success ').fadeOut();
+		// }
+		// setTimeout(second_passed, 3000)
+		
 		function second_passed() {
 			form.find('.msg-success ').fadeOut();
 		}

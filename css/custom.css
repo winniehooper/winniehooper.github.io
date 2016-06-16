@@ -253,7 +253,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-.btn-default {
+.btn {
   color: #fff;
   font-size: 16px;
   background-color: #ed1c24;
@@ -262,28 +262,29 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 6px 30px 9px;
 }
 
-.btn-default:hover {
+.btn:active {
   color: #fff;
-  background-color: #FF4900;
-  border: none;
-  border-radius: 1px;
-}
-
-.btn-default.focus, .btn-default:focus {
-  color: #fff;
-  background-color: #ffa800;
+  background-color: #ed1c24;
   border: none;
   border-radius: 1px;
   opacity: 0.8;
 }
 
-.btn-default.active, .btn-default:active {
+.btn:focus {
   color: #fff;
-  background-color: #ffa800;
+  background-color: #ed1c24;
   border: none;
   border-radius: 1px;
   opacity: 0.8;
 }
+
+.btn:hover {
+  color: #fff;
+  background-color: #ff6b2f;
+  border: none;
+  border-radius: 1px;
+}
+
 
 .resdis {
   padding-right: 25px
