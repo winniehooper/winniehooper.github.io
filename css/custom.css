@@ -167,9 +167,94 @@ img.noflex{
 
 
 
+@media (max-width: 320px){
+  h1 {
+    font-size: 52px;
+    margin-bottom: 70px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .title {
+    margin-top: -280px;
+  }
+  .bage {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 414px){
+  h1 {
+    font-size: 68px;
+    margin-bottom: 70px;
+  }
+  .title {
+    margin-top: -336px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 768px){
+  h1 {
+    font-size: 72px;
+    margin-bottom: 70px;
+  }
+  .title {
+    margin-top: -240px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+  h1 {
+    font-size: 82px;
+    margin-bottom: 70px;
+  }
+  .title {
+    margin-top: -240px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px){
+  h1 {
+    font-size: 86px;
+  }
+  .title {
+    margin-top: -270px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px){
+  h1 {
+    font-size: 106px;
+  }
+  .title {
+    margin-top: -290px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .big_foto{
+      margin-bottom: -35px;
+  }
+}
+
+
+
+
 @media (min-width: 992px) {
     .yarku_forma  {
-          margin-top: -76px;
+          margin-top: -74px;
     }
     .forma {
       padding: 10px 20px 0px;
@@ -177,6 +262,7 @@ img.noflex{
     .residents_2 {
       display: none;
     }    
+
 }
 
 @media (max-width: 992px) {
@@ -187,10 +273,10 @@ img.noflex{
       height: 520px;
       padding: 10px 20px 40px;
     }
-    h1 {
+/*    h1 {
       font-size: 62px;
       margin-bottom: 90px;
-    }
+    }*/
     .residents {
       display: none;
     }    
@@ -198,16 +284,11 @@ img.noflex{
 
 @media (min-width: 1200px) {
     .yarku_forma  {
-          margin-top: -192px;
+          margin-top: -189px;
     }
 }
 
 
-
-.title{ 
-
-  margin-top:-40px
-}
 
 .form-horizontal .control-label {
     padding-top: 6px;
@@ -299,7 +380,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .big_foto {
 	background-image: url(../img/yarku_1.jpg);
-	margin-bottom: -225px;
+	/*margin-bottom: -225px;*/
 	height: 92vh;
 	background-position: center center;
 	background-size: cover;
