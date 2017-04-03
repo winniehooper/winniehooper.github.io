@@ -1,0 +1,10 @@
+body {
+	height: 800px;
+}
+
+.print .check-block {
+	font-size: 14px;
+}
+.print .check-block td.float-right {
+	text-align: right;
+}
